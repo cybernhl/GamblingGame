@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:keepScreenOn="true">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:weightSum="1"
+        android:background="@color/main_color_canvas">
+
+
+        <RelativeLayout
+            android:id="@+id/main_game_board"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:background="@color/main_color_canvas"
+            android:layout_weight="0.20"
+            android:layout_margin="5dp">
+
+            <LinearLayout
+                android:layout_width="400dp"
+                android:layout_height="fill_parent"
+                android:weightSum="1">
+
+                <com.example.rotem.flaminghotgame.WheelView
+                    android:layout_weight="0.20"
+                    android:id="@+id/first_wheel"
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:background="#330000"
+                    android:layout_marginRight="2dp"
+                    android:layout_gravity="center_horizontal"
+                    />
+
+                <com.example.rotem.flaminghotgame.WheelView
+                    android:layout_weight="0.20"
+                    android:id="@+id/second_wheel"
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:background="#550000"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="2dp"
+                    android:layout_gravity="center_horizontal"
+                    />
+
+                <com.example.rotem.flaminghotgame.WheelView
+                    android:layout_weight="0.20"
+                    android:id="@+id/third_wheel"
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:background="#770000"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="2dp"
+                    android:layout_gravity="center_horizontal"
+                    />
+
+                <com.example.rotem.flaminghotgame.WheelView
+                    android:layout_weight="0.20"
+                    android:id="@+id/fourth_wheel"
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:background="#990000"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="2dp"
+                    android:layout_gravity="center_horizontal"
+                    />
+
+                <com.example.rotem.flaminghotgame.WheelView
+                    android:layout_weight="0.20"
+                    android:id="@+id/fifth_wheel"
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:background="#aa0000"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="2dp"
+                    android:layout_gravity="center_horizontal"
+                    />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="400dp"
+                android:layout_height="fill_parent"
+                android:weightSum="1"
+                android:layout_gravity="bottom"
+                >
+
+                <LinearLayout
+                    android:layout_width="400dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.25">
+
+                    <com.example.rotem.flaminghotgame.WinningView
+                        android:id="@+id/first_win_view"
+                        android:layout_weight="1"
+                        android:layout_width="fill_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/main_color_canvas"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="400dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.25"
+                    android:padding="5dp">
+
+                    <com.example.rotem.flaminghotgame.WinningView
+                        android:id="@+id/second_win_view"
+                        android:layout_weight="1"
+                        android:layout_width="fill_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/main_color_canvas"
+
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="400dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.25"
+                    android:padding="5dp">
+
+                    <com.example.rotem.flaminghotgame.WinningView
+                        android:id="@+id/third_win_view"
+                        android:layout_weight="1"
+                        android:layout_width="fill_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/main_color_canvas"
+
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="400dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.25"
+                    android:padding="5dp">
+
+                    <com.example.rotem.flaminghotgame.WinningView
+                        android:id="@+id/fourth_win_view"
+                        android:layout_weight="1"
+                        android:layout_width="fill_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/main_color_canvas"
+                        />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.80"
+            android:layout_alignLeft="@+id/my_menu_view"
+            android:layout_alignParentTop="true"
+            android:background="@color/main_menu_color"
+            android:orientation="vertical"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:padding="5dp">
+
+            <TextView
+                android:id="@+id/CreditsTextView"
+                android:background="@drawable/main_buttons_design"
+                android:layout_width="80dp"
+                android:layout_height="20dp"
+                android:gravity="center"
+                android:text="Credits"
+                android:textColor="@color/colorAccent"
+                android:textSize="18sp"
+                />
+
+            <TextView
+                android:id="@+id/minusCreditsTextView"
+                android:background="@drawable/main_buttons_design"
+                android:layout_width="20dp"
+                android:layout_height="30dp"
+                android:layout_gravity="right"
+                android:gravity="center"
+                android:text="-"
+                android:textColor="@color/colorAccent"
+                android:textSize="22sp"
+                android:layout_margin="5dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentBottom="true"
+                android:layout_toRightOf="@+id/CreditsTextView" />
+
+            <TextView
+                android:id="@+id/totalBetTextView"
+                android:background="@drawable/main_buttons_design"
+                android:layout_width="80dp"
+                android:layout_height="30dp"
+                android:gravity="center"
+                android:text="Total BET"
+                android:textColor="@color/colorAccent"
+                android:textSize="14sp"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/minusCreditsTextView"
+                android:layout_toEndOf="@+id/minusCreditsTextView"
+                android:layout_alignBottom="@+id/CreditsTextView" />
+
+            <TextView
+                android:id="@+id/plusCreditsTextView"
+                android:background="@drawable/main_buttons_design"
+                android:layout_width="20dp"
+                android:layout_height="30dp"
+                android:layout_gravity="right"
+                android:gravity="center"
+                android:text="+"
+                android:textColor="@color/colorAccent"
+                android:textSize="20sp"
+                android:layout_margin="5dp"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/totalBetTextView"
+                android:layout_toEndOf="@+id/totalBetTextView"
+                android:layout_alignBottom="@+id/betSumTextView" />
+
+            <TextView
+                android:id="@+id/betSumTextView"
+                android:background="@drawable/main_buttons_design"
+                android:layout_width="80dp"
+                android:layout_height="20dp"
+                android:gravity="center"
+                android:textColor="@color/colorAccent"
+                android:textSize="18sp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignLeft="@+id/totalBetTextView"
+                android:layout_alignStart="@+id/totalBetTextView"
+                android:layout_toLeftOf="@+id/plusCreditsTextView"
+                android:layout_toStartOf="@+id/plusCreditsTextView" />
+
+            <TextView
+                android:id="@+id/spinTextView"
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:gravity="center"
+                android:text="Spin"
+                android:background="@drawable/spin_button_design"
+                android:textColor="@color/spin_button_text_color"
+                android:textSize="26sp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignBottom="@+id/betSumTextView" />
+
+            <TextView
+                android:id="@+id/winTextView"
+                android:background="@drawable/win_text_view_design"
+                android:layout_width="80dp"
+                android:layout_height="30dp"
+                android:gravity="center"
+                android:text="@string/empty_money"
+                android:textColor="@color/colorAccent"
+                android:textSize="18sp"
+                android:layout_marginRight="15dp"
+                android:layout_alignParentBottom="true"
+                android:layout_toLeftOf="@+id/spinTextView"
+                android:layout_toStartOf="@+id/spinTextView"
+                android:layout_alignParentTop="true" />
+
+            <TextView
+                android:id="@+id/collectTextView"
+                android:background="@drawable/win_text_view_design"
+                android:layout_width="60dp"
+                android:layout_height="30dp"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/colorAccent"
+                android:textSize="14sp"
+                android:layout_marginRight="10dp"
+                android:layout_alignParentBottom="true"
+                android:layout_toRightOf="@+id/automaticGameTextView"
+                android:layout_toLeftOf="@+id/winTextView"
+                android:layout_toStartOf="@+id/winTextView"
+                android:visibility="invisible"
+                android:layout_alignParentTop="true" />
+
+            <TextView
+                android:id="@+id/creditsSumTextView"
+                android:background="@drawable/main_buttons_design"
+                android:layout_width="80dp"
+                android:layout_height="20dp"
+                android:gravity="center"
+                android:textColor="@color/colorAccent"
+                android:textSize="18sp"
+                android:text="@string/empty_money"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <TextView
+                android:id="@+id/gameSettingsTextView"
+                android:background="@drawable/main_buttons_design"
+                android:layout_width="60dp"
+                android:layout_height="30dp"
+                android:gravity="center"
+                android:text="Settings"
+                android:textColor="@color/colorAccent"
+                android:textSize="14sp"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/plusCreditsTextView"
+                android:layout_toEndOf="@+id/plusCreditsTextView"
+                android:layout_alignParentBottom="true" />
+
+            <TextView
+                android:id="@+id/automaticGameTextView"
+                android:layout_width="60dp"
+                android:layout_height="30dp"
+                android:background="#00ff00"
+                android:gravity="center"
+                android:text="AutoPlay"
+                android:textColor="@color/colorAccent"
+                android:textSize="14sp"
+                android:layout_marginLeft="10dp"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/winTextView"
+                android:layout_toEndOf="@+id/gameSettingsTextView"
+                android:layout_alignParentBottom="true" />
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>
+
+

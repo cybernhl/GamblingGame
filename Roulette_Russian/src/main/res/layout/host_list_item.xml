@@ -1,0 +1,17 @@
+<LinearLayout
+    style="@style/lw_item_style"
+    android:id="@+id/player_list_item_ll"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+
+    <TextView
+        style="@style/host_list_item_tw_style"
+        android:id="@+id/bt_dev_name_host_sel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:gravity="center"
+        />
+
+</LinearLayout>
+

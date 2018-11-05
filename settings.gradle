@@ -1,0 +1,11 @@
+include ':BlackJack'
+include ':FruitMachine'
+include ':RollDice'
+include ':Roulette'
+include ':Russian_Roulette'
+//include ':Roulette_Russian' //FIXME pre build AAPT2 fail
+include ':SlotMachine_Flaming'
+include ':SlotMachine'
+include ':SlotMachineReelMosaicing'
+include ':TriPeaksSolitaire'
+//include ':TwentyEight' //Decompile

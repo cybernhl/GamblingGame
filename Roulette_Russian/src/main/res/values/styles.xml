@@ -1,0 +1,60 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat">
+        <!-- Customize your theme here. -->
+        <item name="android:windowBackground">@color/colorBlack</item>
+        <item name="actionBarStyle">@style/ActionBarStyle</item>
+        </style>
+
+    <style name="ActionBarStyle" parent="style/Widget.AppCompat.ActionBar">
+        <item name="background">@color/colorBlack</item>
+        <!--<item name="android:displayOptions">showHome|useLogo</item>-->
+        <item name="displayOptions">none</item>
+    </style>
+
+    <style name="TitleTextViewStyle" parent="@android:style/Widget.TextView" >
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:textSize">@dimen/title_text_size</item>
+    </style>
+
+    <style name="LargeButtonStyle" parent="@android:style/Widget.TextView" >
+        <item name="android:background">@color/colorMainBtnRed</item>
+        <item name="android:layout_margin">@dimen/large_button_margin</item>
+        <item name="android:height">@dimen/large_button_height</item>
+        <item name="android:textSize">@dimen/large_button_text_size</item>
+    </style>
+
+    <style name="SubTitleTextViewStyle">
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:textSize">@dimen/sub_title_text_size</item>
+    </style>
+
+    <style name="BigBtnStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/bigBtnHeight</item>
+        <item name="android:background">@color/appBlue</item>
+        <item name="android:textSize">@dimen/bigBtnTextSize</item>
+        <item name="android:textColor">@color/appYellow</item>
+
+    </style>
+
+    <style name="lw_item_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:background">@color/appYellow</item>
+    </style>
+
+    <style name="host_list_item_tw_style">
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingBottom">10dp</item>
+        <item name="android:textColor">@color/colorBlack</item>
+    </style>
+
+    <style name="PlayersListHeadingTv">
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:textSize">@dimen/players_list_heading_text_size</item>
+    </style>
+
+</resources>

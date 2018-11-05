@@ -1,0 +1,73 @@
+apply plugin: 'application'
+apply plugin: 'java'
+
+def unpackedDistsDir = file("${buildDir}/distributions-unpacked")
+def distName = 'BlackJack'
+mainClassName = 'com.kaweri.blackjack'
+applicationName = 'BlackJack'
+//outputDir = new File(project.buildDir, 'tmp')
+//classpath = jar.outputs.files + project.configurations.runtime
+
+startScripts.enabled = false
+
+sourceSets {
+    main {
+        java {
+            srcDir 'src/main/java'
+        }
+    }
+}
+
+configurations.all {
+    resolutionStrategy.force 'com.google.code.findbugs:jsr305:3.0.2'
+    resolutionStrategy {
+        failOnVersionConflict()
+        preferProjectModules()
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'javax.annotation:javax.annotation-api:1.2'
+    implementation 'com.google.code.findbugs:jsr305:3.0.2'
+    implementation 'com.google.guava:guava:20.0'
+}
+
+task unzipDist(type: Copy) {
+    dependsOn distZip
+
+    def zipFile = file("${buildDir}/distributions/${distName}.zip")
+    def outputDir = unpackedDistsDir
+
+    from zipTree(zipFile)
+    into outputDir
+}
+
+task runServer(type: Exec) {
+    dependsOn unzipDist
+
+    def system = org.gradle.internal.os.OperatingSystem.current()
+
+    // Windows-specific
+    def batchFile = file("${unpackedDistsDir}/${distName}/bin/${distName}.bat")
+    def gitBashExe = new File("C:/Program Files/Git/git-bash.exe")
+
+    // Linux-specific
+    def shFile = file("${unpackedDistsDir}/${distName}/bin/${distName}")
+
+    if (system.isWindows()) {
+        if (gitBashExe.exists()) {
+            commandLine = [gitBashExe, shFile]
+        } else {
+            commandLine = ['cmd', '/C', 'start', batchFile]
+        }
+    } else {
+        commandLine = shFile
+    }
+
+    workingDir = unpackedDistsDir
+    ignoreExitValue = true
+}
+
+sourceCompatibility = "1.8"
+targetCompatibility = "1.8"

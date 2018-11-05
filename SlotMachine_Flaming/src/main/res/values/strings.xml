@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">FlamingHotGame</string>
+
+    <string name="empty_money">0 $</string>
+</resources>
